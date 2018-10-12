@@ -1,0 +1,59 @@
+Class-Customer's inquiry information:
+
+	*What Type
+	*What Model
+	*What Color
+	*What Features
+	*What's their budget
+	
+  *Get Type
+	*Get Model
+	*Get Color
+	*Get Features
+	*Get Value Ranges
+	*Get Location
+	*Get Parked Location
+	*Get Keys
+	
+Class-Vehicle Informational:
+
+	*Return Type
+		-Manual 
+		-Automatic
+		-2 wheel drive
+		-4 wheel drive
+		-Truck
+		-SUV
+		-Sedan
+		-Hybrid
+	
+	*Features
+		-Air conditioning
+		-Automatic Windows
+		-Push Start
+	*Make
+		-Hyundai
+		-Ford
+		-Kia
+	
+		*Model
+	    
+		-Hyundai
+			+Elantra
+			+Tuscon
+		-Ford
+			+F150
+			+F250
+		-Kia
+			+Rio
+			+Rio5
+	
+	*Mileage
+	
+ Class-Vehicle Location:
+
+	*Parked Location
+		-GPS, Bluetooth, Maps
+	
+	*Key Identifier
+		-Key/Fob
