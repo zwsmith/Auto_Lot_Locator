@@ -1,23 +1,23 @@
 Class-Customer's inquiry information:
 
-	*What Type
+	*What Type-Property
 	*What Model
 	*What Color
 	*What Features
 	*What's their budget
 	
   *Get Type
-	*Get Model
-	*Get Color
-	*Get Features
-	*Get Value Ranges
-	*Get Location
-	*Get Parked Location
-	*Get Keys
+	*Get Model--Property
+	*Get Color--Property
+	*Get Features--Property
+	*Get Value Ranges--Property
+	*Get Location--Property
+	*Get Parked Location--Property
+	*Get Keys--Property
 	
 Class-Vehicle Informational:
 
-	*Return Type
+	*Return Type--Method
 		-Manual 
 		-Automatic
 		-2 wheel drive
@@ -27,11 +27,11 @@ Class-Vehicle Informational:
 		-Sedan
 		-Hybrid
 	
-	*Features
+	*Features--Method
 		-Air conditioning
 		-Automatic Windows
 		-Push Start
-	*Make
+	*Make--Method
 		-Hyundai
 		-Ford
 		-Kia
@@ -50,7 +50,7 @@ Class-Vehicle Informational:
 	
 	*Mileage
 	
- Class-Vehicle Location:
+ Class-Vehicle Location:--Method
 
 	*Parked Location
 		-GPS, Bluetooth, Maps
