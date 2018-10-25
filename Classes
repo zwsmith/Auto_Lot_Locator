@@ -1,13 +1,21 @@
-Class-Customer's inquiry information:
+public class VehCustomerReq    //Customer's inquiry information enter into device:
 
-	*What Type-Property
-	*What Model
-	*What Color
-	*What Features
-	*What's their budget
+	public string Type {get; set} //*What Type-Property
+	public string Model {get; set} //*What Model
+	public string Color {get; set} //*What Color
+	public string Features {get; set} //*What Features
+	public string budget {get; set} //*What's their budget
 	
-  *Get Type
-	*Get Model--Property
+  //*Get customer's requested information
+	//type
+	private string cModel; //*Get Model--Property
+	
+	public string CModel
+	
+	
+	
+	
+	
 	*Get Color--Property
 	*Get Features--Property
 	*Get Value Ranges--Property
