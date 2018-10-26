@@ -7,24 +7,116 @@ public class VehCustomerReq    //Customer's inquiry information enter into devic
 	public string budget {get; set} //*What's their budget
 	
   //*Get customer's requested information
-	//type
+	
+	private string cType; //*Get Type--Property
+	
+	public string CType {
+	
+		get {
+		     return X;
+		     }
+		Set {
+		        something = something;
+		     }
+	}
+	
 	private string cModel; //*Get Model--Property
 	
-	public string CModel
+	public string CModel {
 	
+		get {
+		     return X;
+		     }
+		Set {
+		        something = something;
+		     }
+	}
 	
+	private string cColor; //*Get Color--Property
 	
+	public string CColor {
 	
+		get {
+		     return X;
+		     }
+		Set {
+		        something = something;
+		     }
+	}
 	
-	*Get Color--Property
-	*Get Features--Property
-	*Get Value Ranges--Property
-	*Get Location--Property
-	*Get Parked Location--Property
-	*Get Keys--Property
+	private string cFeatures; //*Get Features--Property
+	
+	public string CFeatures {
+	
+		get {
+		     return X;
+		     }
+		Set {
+		        something = something;
+		     }
+	}
+	
+	private string cRanges; //*Get Ranges--Property
+	
+	public string CRanges {
+	
+		get {
+		     return X;
+		     }
+		Set {
+		        something = something;
+		     }
+	}
+	
+	private string cLocation; //*Get Location--Property
+	
+	public string CLocation {
+	
+		get {
+		     return X;
+		     }
+		Set {
+		        something = something;
+		     }
+	}
+	
+	private string cParkedLocation; //*Get Parked Location--Property
+	
+	public string CParkedLocation {
+	
+		get {
+		     return X;
+		     }
+		Set {
+		        something = something;
+		     }
+	}
+	
+	private string cKeys; //*Get Keys--Property
+	
+	public string CKeys {
+	
+		get {
+		     return X;
+		     }
+		Set {
+		        something = something;
+		     }
+	}
+	private string cBudgets; //*Get cBudgets--Property
+	
+	public string CBudgets {
+	
+		get {
+		     return X;
+		     }
+		Set {
+		        something = something;
+		     }
+	}
 	
 Class-Vehicle Informational:
-
+     
 	*Return Type--Method
 		-Manual 
 		-Automatic
@@ -34,15 +126,28 @@ Class-Vehicle Informational:
 		-SUV
 		-Sedan
 		-Hybrid
+     public string CTypeV ()
+     {
+     
+     }
 	
 	*Features--Method
 		-Air conditioning
 		-Automatic Windows
 		-Push Start
+      public string CFeaturesV ()
+     {
+     
+     }
+    
 	*Make--Method
 		-Hyundai
 		-Ford
 		-Kia
+	 public string CMakeV ()
+     {
+     
+     }
 	
 		*Model
 	    
@@ -55,6 +160,10 @@ Class-Vehicle Informational:
 		-Kia
 			+Rio
 			+Rio5
+	 public string CModelV ()
+     {
+     
+     }
 	
 	*Mileage
 	
