@@ -1,0 +1,19 @@
+using System;
+namespace AutoApp
+{
+    class ProgramAuto
+    {
+        static void Main (string[] args)
+        {
+          Console.Writeline ("Enter Customer's Information");
+          var cInfo = Console.ReadLine();
+          
+          Console.Writeline ("Please select model: );
+          var option = Console.ReadLine();
+        }
+    
+    }
+
+
+
+}
