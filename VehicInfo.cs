@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace VehicalApp
 {
+    public  enum VehCate { Exit,Suv,Sedan,Truck,Print};
     public enum VehType { Manual, Automatic, TwoWheelDrv, FrWheelDrv };
     public enum VehFeatures { AirCondition, AutoWindows, PustStart };
     public enum VehColor { White, Red, Blue, Black, Gray };
@@ -12,14 +13,13 @@ namespace VehicalApp
     public enum VehModel { Elantra, Tuson, F150, F250, Rio, Rio5 };
 
     /// <summary>
-
-    /// Defines all properties and methods for a bank account
-
+    /// Defines all properties of a vehicle
     /// </summary>
+
     public class VehicInfo
     {
-
-        public VehType Type { get; set; } //*What Type-Property
+        public VehCate VehCategs { get; set; }
+        public VehType TypeC { get; set; } //*What Type-Property
 
         public VehMake Make { get; set; } //*What Make
 
@@ -27,42 +27,73 @@ namespace VehicalApp
 
         public VehColor Color { get; } //*What Color
         public string Cselect { get; set; }
-        public VehFeatures Features { get; set; } //*What Features
+        //public VehFeatures Features { get; set; } //*What Features
 
-        string Budget { get; set; } //*What's their budget
+        //string Budget { get; set; } //*What's their budget
 
-
-
-
-        public void Tes([Optional]string Cmake, [Optional]string Smake, [Optional] string Tmake)
+        public void Tes(VehMake Cmake, VehCate category)
 
         {
 
 
-            if (Tmake == "Ford")
+            if (Cmake == VehMake.Ford && VehCate.Truck == category) 
             {
                 Console.WriteLine("Please Select: F150 or F250");
+                Console.Write("You've entered: ");
                 var makeInven = Console.ReadLine();
                 Model = makeInven;
             }
 
-
-            if (Smake == "Kia")
+            if (Cmake == VehMake.Ford && VehCate.Suv == category)
             {
-                Console.WriteLine("Please Select: Rio or Rio5");
+                Console.WriteLine("Please Select: EcoSport, Edge, or Escape");
+                Console.Write("You've entered: ");
                 var makeInven = Console.ReadLine();
                 Model = makeInven;
             }
 
-
-            if (Cmake == "Hyundai")
+            if (Cmake == VehMake.Ford && VehCate.Sedan == category)
             {
-                Console.WriteLine("Please Select: Elantra or Tuscon");
+                Console.WriteLine("Please Select: Fiesta, Focus, or Taurus");
+                Console.Write("You've entered: ");
+                var makeInven = Console.ReadLine();
+                Model = makeInven;
+            }
+            if (Cmake == VehMake.Kia && VehCate.Suv == category)
+            {
+                Console.WriteLine("Please Select: Niro, Sorento, or Sportage");
+                Console.Write("You've entered: ");
                 var makeInven = Console.ReadLine();
                 Model = makeInven;
             }
 
+            if (Cmake == VehMake.Kia && VehCate.Sedan == category)
+            {
+                Console.WriteLine("Please Select: Cadenza, Forte, Optima");
+                Console.Write("You've entered: ");
+                var makeInven = Console.ReadLine();
+                Model = makeInven;
+            }
+            if (Cmake == VehMake.Hyundai && VehCate.Suv == category)
+            {
+                Console.WriteLine("Please Select: Tuscon, Kona, Santa Fe");
+                Console.Write("You've entered: ");
+                var makeInven = Console.ReadLine();
+                Model = makeInven;
+            }
 
+            if (Cmake == VehMake.Hyundai && VehCate.Sedan == category)
+            {
+                Console.WriteLine("Please Select: Accent, Elantra, or Sonata");
+                Console.Write("You've entered: ");
+                var makeInven = Console.ReadLine();
+                Model = makeInven;
+            }
+
+            if (Cmake == VehMake.Hyundai && VehCate.Truck == category || Cmake == VehMake.Kia && VehCate.Truck == category)
+            {
+                Console.WriteLine("Sorry, Ford is the make that has truck models");
+            }
         }
 
         public void CusColor([Optional]string Vcolor)
@@ -101,21 +132,13 @@ namespace VehicalApp
             }
 
 
-
-
         }
-        public void Print()
-        {
-            //var vehInfo = new VehicInfo();
-            Console.WriteLine("#############################################################");
-            Console.WriteLine("################# Results from Query ########################");
-            Console.WriteLine($"Type: {Type}");
-            Console.WriteLine($"Make: {Make}");
-            Console.WriteLine($"Model: {Model}");
-            Console.WriteLine($"Color: {Cselect}");
-            Console.WriteLine("#############################################################");
-            Console.WriteLine("#############################################################");
 
+
+        public VehCate GetCategory(VehCate vehcateg)
+        {
+            
+            return VehCategs;
         }
 
     }
