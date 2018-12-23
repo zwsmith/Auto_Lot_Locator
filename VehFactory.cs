@@ -8,26 +8,31 @@ namespace VehicalApp
 {
     public static class VehFactory
     {
-        //private static List<VehicInfo> vInvent = new List<VehicInfo>();
+        private static List<VehicInfo> vInvent = new List<VehicInfo>();
+       
 
-        public static VehicInfo VehHistory( string model, [Optional] VehType ctype, [Optional]VehMake make )
+        public static VehicInfo VehHistory(VehCate cate, VehMake make, [Optional]string model, [Optional] VehType ctype, [Optional]string color )
         {
-            if (string.IsNullOrEmpty(model))
-            {
-                throw new ArgumentException("Please enter model", nameof(model));
-            }
+           
 
             var vehistory = new VehicInfo
             {
-                TypeC = ctype,
+                VehCategs = cate,
                 Make = make,
-                Model = model 
+                Model = model,
+                Cselect = color 
                      
             };
 
+            vInvent.Add(vehistory);
             return vehistory;
         }
 
-        
+        public static IEnumerable<VehicInfo> GetVehicInfos()
+        {
+            return vInvent;
+
+        }
+
     }
 }
