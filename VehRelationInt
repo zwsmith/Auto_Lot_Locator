@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
+
+namespace VehicalApp
+{
+    //public enum Categories
+    //    {
+    //        Suv, Sedan, Truck
+
+    //    }
+    public class VehRelation
+    {
+        
+        public int CusRecord { get; set; }
+        public string CusName { get; set ; }
+        public DateTime CusRecDateTime { get; set; }
+
+        //public Categories Cate { get; set; }
+        public VehCate Categories { get; set; }
+        public decimal Budget { get; set; }
+
+        [ForeignKey("VehicInfo")]
+        public string Cselect { get; set; }
+        public virtual VehicInfo VehicInfo { get; set; }
+
+        public VehRelation()
+        {
+            CusRecDateTime = DateTime.Now;
