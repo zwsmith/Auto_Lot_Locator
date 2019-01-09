@@ -78,6 +78,22 @@ namespace VehicalApp
                                 //Console.WriteLine("what DA");
                                 Console.WriteLine($" Name:  {Search.CusName} Category: {Search.VehCategs}   Make: {Search.Make}   Color: {Search.Color}   Model: {Search.Model}   Type: {Search.TypeC} ");
                             }
+                            Console.Write("Enter Customer's Name");
+                            var budNewName = Console.ReadLine();
+                            vehInfo.GetCusName(budNewName);
+
+                            Console.Write("Enter Customer's New Budget: ");
+                            var newBud = Convert.ToDecimal(Console.ReadLine());
+                            vehInfo.CusBudget(newBud);
+
+                            VehFactory.BudgetUpdate(budNewName, newBud);
+
+                            var searches1 = VehFactory.GetVehicInfos(budNewName);
+                            foreach (var Search in searches1)
+                            {
+                                //Console.WriteLine("what DA");
+                                Console.WriteLine($" Name:  {Search.CusName} Budget: {Search.Budget} Category: {Search.VehCategs}   Make: {Search.Make}   Color: {Search.Color}   Model: {Search.Model}   Type: {Search.TypeC} ");
+                            }
                             Console.ResetColor();
                             break;
                         }
