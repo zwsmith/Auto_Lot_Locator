@@ -44,6 +44,17 @@ namespace VehicalApp
             //return db.VehicInfos;
             return vInvent;
         }
+        
+         public static void BudgetUpdate(string name, decimal amount)
+
+        {
+            var newbud = vInvent.SingleOrDefault(a => a.CusName == name);
+
+            
+            newbud.CusBudget(amount);
+
+
+        }
 
         //public static void CustomerRecord(string name, VehCate cate, decimal budget)
         //{
